@@ -1,0 +1,65 @@
+<!-- index.html -->
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <!-- SCROLLS -->
+      <!-- load bootstrap and fontawesome via CDN -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+      <link rel="stylesheet" href="css/styles.css" />
+
+      <!-- SPELLS -->
+      <!-- load angular and angular route via CDN -->
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+          <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+      <script src="js/script.js"></script>
+    </head>
+    <body>
+
+        <header id="header">
+          <div class="search">
+            <input id="search" type="text">
+          </div>
+          <div class="buttons">
+            <div class="mainButtons">
+              <ul>
+                <li><a href="#"><i class="fa fa-plus-square" aria-hidden="true"></i><span class="mainButtonName">ADD</span></a></li>
+                <li><a href="#about"><i class="fa fa-upload" aria-hidden="true"></i><span class="mainButtonName">UPLOAD</span></a></li>
+                <li><a href="#contact"><i class="fa fa-download" aria-hidden="true"></i><span class="mainButtonName">DOWNLOAD</span></a></li>
+              </ul>
+            </div>
+            <div class="logOut">
+              <button id="logOutButton" type='button' onclick="">Log out</button>
+            </div>
+          </div>
+        </header>
+
+        <div id='sideNav'>
+          <div class="sideMenu">
+            <div class='leftButtons'>
+              <ul>
+                <li><a href="">Budget</a></li>
+                <li><a href=""><i class="fa fa-tachometer" aria-hidden="true"></i>Dashboard</a></li>
+                <li><a href=""><i class="fa fa-pie-chart" aria-hidden="true"></i>Reports</a></li>
+                <li><a href=""><i class="fa fa-bar-chart" aria-hidden="true"></i>Budgets</a></li>
+                <li><a href=""><i class="fa fa-line-chart" aria-hidden="true"></i>Forecast</a></li>
+                <li><a href=""><i class="fa fa-university" aria-hidden="true"></i>Accounts</a></li>
+                <li><a href=""><i class="fa fa-calendar-o" aria-hidden="true"></i>Reminders</a></li>
+                <li><a href=""><i class="fa fa-tag" aria-hidden="true"></i>Tags</a></li>
+                <li><a href=""><i class="fa fa-address-card-o" aria-hidden="true"></i>Contacts</a></li>
+                <li><a href=""><i class="fa fa-users" aria-hidden="true"></i>Groups</a></li>
+              </ul>
+            </div>
+            <div class="shrinkExpand">
+              <span id="openNav" onclick="openNav()">Expand</span>
+              <span id="closeNav" onclick="closeNav()">Shrink</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="main">
+            Hello
+        </div>
+
+    </body>
+    </html>

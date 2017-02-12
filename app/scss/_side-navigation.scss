@@ -1,0 +1,34 @@
+.sideMenu {
+	position: relative;
+	width: 250px;
+	height: 100%;
+
+	li {
+		height: 60px;
+		border-bottom: 1px solid #2c3e50;
+	}
+
+	a {
+		display: block;
+		color: white;
+		text-decoration: none;
+		line-height: 60px;
+		i {
+			display: inline-block;
+			text-align: center;
+			width: 75px;
+			font-size: 28px;
+		}
+	}
+
+	.shrinkExpand {
+		position: absolute;
+		bottom: 0;
+		#openNav {
+			display: inline;
+		}
+		#closeNav {
+			display: none;
+		}
+	}
+}
