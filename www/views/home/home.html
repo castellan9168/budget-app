@@ -1,24 +1,7 @@
-<!-- index.html -->
-    <!DOCTYPE html>
-    <html>
-    <head>
-      <!-- SCROLLS -->
-      <!-- load bootstrap and fontawesome via CDN -->
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-      <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-      <link rel="stylesheet" href="css/styles.css" />
 
-      <!-- SPELLS -->
-      <!-- load angular and angular route via CDN -->
-      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
-          <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
-      <script src="js/script.js"></script>
-    </head>
-    <body>
-
-        <header id="header">
+<header id="header">
           <div class="search">
-            <input id="search" type="text">
+            <input id="search" type="text" placeholder="Search">
           </div>
           <div class="buttons">
             <div class="mainButtons">
@@ -29,7 +12,7 @@
               </ul>
             </div>
             <div class="logOut">
-              <button id="logOutButton" type='button' onclick="">Log out</button>
+              <button id="logOutButton" type='button' ng-click="logout()">Log out</button>
             </div>
           </div>
         </header>
@@ -51,15 +34,12 @@
               </ul>
             </div>
             <div class="shrinkExpand">
-              <span id="openNav" onclick="openNav()">Expand</span>
-              <span id="closeNav" onclick="closeNav()">Shrink</span>
+              <span id="openNav" ng-click="openNav()">Expand</span>
+              <span id="closeNav" ng-click="closeNav()">Shrink</span>
             </div>
           </div>
         </div>
 
         <div id="main">
-            Hello
+            Hello my app with db
         </div>
-
-    </body>
-    </html>

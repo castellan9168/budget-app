@@ -5,11 +5,18 @@ header {
 		line-height: 55px;
 		height: 100%;
 		#search {
+			color: #7f8c8d;
+			font-size: 14px;
 			width: 300px;
 			height: 40px;
 			border: 2px solid #7f8c8d;
 			border-radius: 20px;
-			background-color: transparent;
+			background: url('../img/icons/search.svg') no-repeat 10px;
+			padding-left: 38px;
+			&::-webkit-input-placeholder{
+				font-size: 14px;
+				color: #7f8c8d;
+			}
 		}
 	}
 	.buttons{
@@ -22,6 +29,7 @@ header {
 					display: inline-block;
 					margin-right: 15px;
 					a {
+						color: #7f8c8d;
 						text-decoration: none;
 						.mainButtonName {
 							display: block;
@@ -33,6 +41,9 @@ header {
 							text-align: center;
 							font-size: 30px;
 						}
+					}
+					&:hover{
+						border-bottom: 2px solid #7f8c8d;
 					}
 				}
 			}

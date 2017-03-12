@@ -14,11 +14,11 @@ body {
 header {
   margin-left: 75px;
   height: 60px;
-  background-color: #95a5a6; }
+  background-color: #E0E0E0; }
 
 #sideNav {
   color: #ecf0f1;
-  background-color: #34495e;
+  background-color: #424242;
   height: 100%;
   width: 75px;
   position: fixed;
@@ -29,7 +29,7 @@ header {
 
 #main {
   margin-left: 75px;
-  background-color: #bdc3c7; }
+  background-color: #F5F5F5; }
 
 header .search {
   display: inline-block;
@@ -37,11 +37,17 @@ header .search {
   line-height: 55px;
   height: 100%; }
   header .search #search {
+    color: #7f8c8d;
+    font-size: 14px;
     width: 300px;
     height: 40px;
     border: 2px solid #7f8c8d;
     border-radius: 20px;
-    background-color: transparent; }
+    background: url("../img/icons/search.svg") no-repeat 10px;
+    padding-left: 38px; }
+    header .search #search::-webkit-input-placeholder {
+      font-size: 14px;
+      color: #7f8c8d; }
 
 header .buttons {
   height: 100%;
@@ -52,6 +58,7 @@ header .buttons {
       display: inline-block;
       margin-right: 15px; }
       header .buttons .mainButtons ul li a {
+        color: #7f8c8d;
         text-decoration: none; }
         header .buttons .mainButtons ul li a .mainButtonName {
           display: block;
@@ -61,6 +68,8 @@ header .buttons {
           display: block;
           text-align: center;
           font-size: 30px; }
+      header .buttons .mainButtons ul li:hover {
+        border-bottom: 2px solid #7f8c8d; }
   header .buttons .logOut {
     line-height: 60px;
     float: left;
@@ -79,7 +88,7 @@ header .buttons {
   height: 100%; }
   .sideMenu li {
     height: 60px;
-    border-bottom: 1px solid #2c3e50; }
+    border-bottom: 1px solid #212121; }
   .sideMenu a {
     display: block;
     color: white;

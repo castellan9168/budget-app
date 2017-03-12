@@ -1,14 +1,31 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var browserSync = require('browser-sync').create();
+var nodemon = require('gulp-nodemon');
 
-gulp.task('browserSync', function() {
-	browserSync.init({
+gulp.task('browserSync', ['nodemon'], function() {
+	browserSync.init(null, {
+		files: ['www/**/*.*'],
+		port: 7000,
 		server: {
-			baseDir: 'app'
-		},
+			baserDir: 'www'
+		}
 	});
-});	
+});
+
+gulp.task('nodemon', function(cb) {
+	var started = false;
+
+	return nodemon({
+		script: 'server.js'
+	}).on('start', function () {
+		//to avoid nodemon being started multiple times
+		if (!started) {
+			cb();
+			started = true;
+		} 
+	});
+});
 
 gulp.task('sass', function() {
 	return gulp.src('app/scss/**/*.scss')
@@ -19,8 +36,8 @@ gulp.task('sass', function() {
 		}));
 });
 
-gulp.task('watch',['browserSync', 'sass'], function() {
-	gulp.watch('app/scss/**/*.scss', ['sass']);
-	gulp.watch('app/**/*.html', browserSync.reload);
-	gulp.watch('app/js/**/*.js', browserSync.reload);
+gulp.task('watch',['sass', 'browserSync'], function() {
+	gulp.watch('www/scss/**/*.scss', ['sass']);
+	gulp.watch('www/**/*.html', browserSync.reload);
+	gulp.watch('www/js/**/*.js', browserSync.reload);
 });
